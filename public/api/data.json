@@ -1,0 +1,81 @@
+{
+    "promo": {
+        "title": "Я еще маленький фронтенд-разработчик",
+        "description": "Но скоро я изучу все, что дают менторы и стану чуть побольше... Честно."
+    },
+    "skills": {
+        "title": "Навыки",
+        "content": [
+            {
+                "key": "HTML",
+                "value": "Я уже умею верстать, делать разметку, выучил семантические теги и знаю, когда какой нужно использовать"
+            },
+            {
+                "key": "CSS",
+                "value": "Могу сверстать и стилизовать несложный макет, адаптировать верстку под разные разрешения, использую flexbox и освоил позиционирование"
+            },
+            {
+                "key": "JavaScript",
+                "value": "Я боюсь JavaScript, он ломает мне мозг и не дает спокойно жить, но я стараюсь... Надеюсь, скоро узнаю побольше и смогу писать функции. А пока мне нужно почитать учебник по JS, чтоб хотя бы освоить теорию и хорошо в ней разбираться"
+            },
+            {
+                "key": "Vue",
+                "value": "Выглядит несложно до тех пор, пока не залезешь... К сожалению, потом не вылезешь"
+            },            
+            {
+                "key": "Twig",
+                "value": "А это что вообще такое?"
+            }
+        ]
+    }, 
+    "social": {
+        "title": "Мои соцсети",
+        "subtitle": "Вот в этих соцсетях можете найти меня и посочувствовать",
+        "content": [
+            {
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/2048px-VK_Compact_Logo_%282021-present%29.svg.png",
+                "link": "https://vk.com"
+            },
+            {
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Odnoklassniki.svg/1200px-Odnoklassniki.svg.png",
+                "link": "https://www.youtube.com/"
+            },
+            {
+                "icon": "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
+                "link": "https://ok.ru/"
+            },
+            {
+                "icon": "https://img.freepik.com/premium-vector/discord-modern-logo_578229-177.jpg",
+                "link": "https://discord.com/"
+            },
+            {
+                "icon": "https://play-lh.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q",
+                "link": "https://web.telegram.org/"
+            },
+            {
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Skype_logo_%282019%E2%80%93present%29.svg/991px-Skype_logo_%282019%E2%80%93present%29.svg.png",
+                "link": "https://www.skype.com/"
+            },
+            {
+                "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1024px-Steam_icon_logo.svg.png",
+                "link": "https://store.steampowered.com/"
+            }
+        ]
+    },
+    "posts": {
+        "title": "Последние посты",
+        "content": [
+            {
+                "title": "Я уже чуть побольше котик",
+                "description": "Я послушал всякие лекции, поделал задания, но кажется я все-таки котик и у меня лапки.",
+                "date": "30 Apr 23",
+                "link": "/posts/id"
+            },            {
+                "title": "Я маленький котик",
+                "description": "Я маленький котик. Я маленький котик. Я маленький котик. Я маленький котик. Я маленький котик.",
+                "date": "30 Mar 23",
+                "link": "/posts/id"
+            }
+        ]
+    }
+}

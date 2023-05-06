@@ -1,0 +1,58 @@
+#app{
+    
+    color: #363940;
+}
+.contener{
+    width: 940px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+h1{
+    font-weight: 500;
+    font-size: 58px;
+    line-height: 68px;
+    color: #363940;
+}
+h2{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: #363940;
+}
+h4{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #363940;
+}
+h6{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #363940;
+}
+.small-paragraph{
+    font-size: 14px;
+    line-height: 22px;
+    color: #95A1BB;
+}
+.paragraf{
+    line-height: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #363940;
+}
+a{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: #6E38F7;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
