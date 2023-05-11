@@ -2,9 +2,9 @@
 <!-- eslint-disable vue/valid-template-root -->
 <template>
  <section class="contener">
-    <h2>{{ skillsList.title }}</h2>
+    <h2>{{ SkillsStore.title }}</h2>
     <div class="Blocks">
-        <div v-for="(item, index) in skillsList.content" :key="index" class="ItemBlocks">
+        <div v-for="(item, index) in SkillsStore.content" :key="index" class="ItemBlocks">
             <div  class="head">
             <h6>{{ item.key}}</h6>
             <button><img src="/Image/minus.png" alt=""></button>
@@ -17,23 +17,23 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
+
 export default{
     name:'SkillsBlock',
-    data: () => {
-        return {
-            skillsList: {}
-        }
-    }, 
+     
+    computed: {
+        ...mapGetters([
+            'SkillsStore'
+        ]),
+    },
+    methods: {
+        ...mapActions([
+            'AxsiosStoreSkills'
+        ])
+    },
     mounted() {
-        this.axios
-            .get('/api/data.json')
-            .then(response => {
-                this.skillsList = response.data.skills;
-                
-            })
-            .catch(error => {
-                console.log(error);
-            })
+        this.AxsiosStoreSkills()
     }
 }
 </script>

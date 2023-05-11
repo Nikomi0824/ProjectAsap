@@ -3,14 +3,14 @@
 <template>
  <section class="slider">
     <div class="contener heading">
-        <h2>{{ slides.title }}</h2>
-        <p class="paragraf">{{ slides.subtitle }} </p>
+        <h2>{{ SladerStore.title }}</h2>
+        <p class="paragraf">{{ SladerStore.subtitle }} </p>
     </div>
     <div class="Item">
         <img src="/Image/Left.png" class="left" alt="left">
         <div class="sliderItem contener"> 
-            <div class="IMG_item" v-for="(slide, index) in slides.content" :key="index">
-                <img :src="slide.icon" :alt="slide.link"/>
+            <div class="IMG_item" v-for="(slide, index) in SladerStore.content" :key="index">
+                <img :src="slide.icon" :alt="SladerStore.link"/>
             </div>
         </div>
         <img src="/Image/Left.png" class="right" alt="right">
@@ -19,23 +19,22 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
+
 export default{
     name:'SliderBlock',
-    data: () => {
-        return {
-            slides: [],
-        }
-    }, 
+     computed: {
+        ...mapGetters([
+            'SladerStore'
+        ]),
+    },
+    methods: {
+        ...mapActions([
+            'AxsiosStoreSlader'
+        ])
+    },
     mounted() {
-        this.axios
-            .get('/api/data.json')
-            .then(response => {
-                this.slides = response.data.social;
-                
-            })
-            .catch(error => {
-                console.log(error);
-            })
+        this.AxsiosStoreSlader()
     }
 }
 </script>

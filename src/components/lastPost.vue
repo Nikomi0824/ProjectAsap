@@ -3,33 +3,34 @@
     <h2>Last posts</h2>
     <div class="top"><a href="#">ALL POSTS</a></div>
     <div class="ItemPosts">
-      <itemPost v-for="(item, index) in posts.content" :key="index" :item="item"></itemPost>
+      <itemPost v-for="(item, index) in PostStore.content" :key="index" :item="item"></itemPost>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 import itemPost from '@/components/itemPost.vue'
+
 export default {
  name:'LastPost',
  components:{
   itemPost,
  },
- data: () => {
-    return {
-      posts: {}
-    }
-  }, 
+  computed: {
+    ...mapGetters([
+      'PostStore'
+    ]),
+  },
+  methods: {
+    ...mapActions([
+      'AxsiosStorePost'
+    ])
+  },
   mounted() {
-    this.axios
-      .get('/api/data.json')
-      .then(response => {
-        this.posts = response.data.posts;
-      })
-      .catch(error => {
-        console.log(error);
-      })
+    this.AxsiosStorePost()
   }
+
 }
 
 </script>

@@ -5,7 +5,7 @@
     <div class="right contener">
         <div class="top">
             <h1>I am Slava</h1>
-            <p class="paragraf inInfPararagraf">{{ information.title }}<br/>{{ information.description }}</p>
+            <p class="paragraf inInfPararagraf">{{ InformationsStore.title }}<br/>{{ InformationsStore.description }}</p>
         </div>
         <a>SCROLL TO MORE</a>
     </div>
@@ -14,24 +14,26 @@
  
 </template>
 <script>
+import {  mapActions, mapGetters } from 'vuex';
+
+
+
 export default{
     name: 'InformationBlock',
-    data(){
-        return{
-            information:{}
-        }
+    computed:{
+        ...mapGetters([
+            'InformationsStore'
+        ]),
     },
-    mounted() {
-        this.axios
-            .get('/api/data.json')
-            .then(response => {
-                this.information = response.data.promo;
-               
-            })
-            .catch(error => {
-                console.log(error);
-            })
+    methods:{
+        ...mapActions([
+            'AxsiosStoreInformations'
+        ])
+    },
+    mounted(){
+        this.AxsiosStoreInformations()
     }
+    
 }
 </script>
 
