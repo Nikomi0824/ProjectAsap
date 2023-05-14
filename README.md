@@ -1,4 +1,4 @@
-# vuex
+# router
 
 ## Project setup
 ```

@@ -12,16 +12,15 @@
                 <div class="bottom-bun"></div>
     </label>
     <nav class=" link ">
-        <a class=""  v-for="(item, index) in links" :key="index" :href="item.url" >{{ item.label }}</a>
-    </nav>
-
-
-    
-
+         <router-link   
+         v-for="(item, index) in links" :key="index" :to=item.url
+         >{{ item.label }}</router-link>
+    </nav> 
   </header>
 </template>
 
 <script>
+
 export default {
     name: 'HeaderBlock',
     data: () => {
@@ -29,28 +28,30 @@ export default {
             links: [
                 {
                     label: 'ABOUT',
-                    url: '#about'
+                    url:  '/PageMainBlock#about'
                 },
                 {
                     label: 'SKILLS',
-                    url: '#skills'
+                    url: '/PageMainBlock#skills' 
                 },
                 {
                     label: 'SOCIAL',
-                    url: '#social'
+                    url: { name: 'PageMainBlock'  , hash: 'social' }
                 },
                 {
                     label: 'CONTACTS US',
-                    url: '#contacts'
+                    url: {name : 'PageMainBlock' , hash: 'contact' }
                 },
                 {
                     label: 'BLOG',
-                    url: 'blog',
+                    url: {name : 'PagBlog'  },
+                    
                 }
             ],
             
         }
-    }
+    },
+    
 }
 </script>
 
