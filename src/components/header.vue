@@ -28,11 +28,11 @@ export default {
             links: [
                 {
                     label: 'ABOUT',
-                    url:  '/PageMainBlock#about'
+                    url:  '/'
                 },
                 {
                     label: 'SKILLS',
-                    url: '/PageMainBlock#skills' 
+                    url: '/' 
                 },
                 {
                     label: 'SOCIAL',

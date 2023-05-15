@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PageMainBlock from '@/views/MainBlock.vue'
-
+import PagBlogVue from '@/views/PagBlog.vue'
 
 
 
@@ -9,18 +9,15 @@ Vue.use(VueRouter)
 
 const routes = [
 {
-  path:'/PageMainBlock',
+  path:'/',
   name:'PageMainBlock',
   component: PageMainBlock
 },
 {
   path:'/PagBlog',
   name:'PagBlog',
-  component: () => import(/* webpackChunkName: "about" */ '../views/PagBlog.vue')
+  component: PagBlogVue
 }
-
-  
- 
 ]
 
 const router = new VueRouter({
