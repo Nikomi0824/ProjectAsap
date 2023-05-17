@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PageMainBlock from '@/views/MainBlock.vue'
 import PagBlogVue from '@/views/PagBlog.vue'
-
+import MyPostVue from '@/views/MyPost.vue'
 
 
 Vue.use(VueRouter)
@@ -16,7 +16,12 @@ const routes = [
 {
   path:'/PagBlog',
   name:'PagBlog',
-  component: PagBlogVue
+  component: PagBlogVue,
+},
+{
+  path:'/PagBlog/:id',
+  name:'MyPostVue',
+  component: MyPostVue,
 }
 ]
 

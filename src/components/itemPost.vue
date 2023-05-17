@@ -9,7 +9,7 @@
           <p class="paragraf">{{item.description }}</p>
           <div class="botton">
             <p class="small-paragraph">{{ item.date }}</p>
-            <a :href="item.link">Read More </a>
+           <router-link :to="{ name: 'MyPostVue', params: { id: 313 } }">Read More </router-link>
           </div>
         </div>
     </section>    

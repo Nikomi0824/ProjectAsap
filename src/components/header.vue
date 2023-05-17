@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'HeaderBlock',
     data: () => {
@@ -36,11 +35,11 @@ export default {
                 },
                 {
                     label: 'SOCIAL',
-                    url: { name: 'PageMainBlock'  , hash: 'social' }
+                    url: { name: 'PageMainBlock'  }
                 },
                 {
                     label: 'CONTACTS US',
-                    url: {name : 'PageMainBlock' , hash: 'contact' }
+                    url: {name : 'PageMainBlock'  }
                 },
                 {
                     label: 'BLOG',
