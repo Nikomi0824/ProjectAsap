@@ -35,12 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.top {
-    display: flex;
-    justify-content: end;
-    margin: 52px 0 48px;
 
-}
 
 h2 {
     display: flex;

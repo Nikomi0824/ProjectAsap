@@ -1,15 +1,15 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- eslint-disable vue/valid-template-root -->
 <template>
- <section class="contener">
+ <section class="contener" id="SKILLS">
     <h2>{{ SkillsStore.title }}</h2>
     <div class="Blocks">
-        <div v-for="(item, index) in SkillsStore.content" :key="index" class="ItemBlocks">
+        <div v-for="(item, index) in SkillsStore.content" :key="index"  :class="['ItemBlocks', { 'skills-item_active': index === activeIndex }]">
             <div  class="head">
             <h6>{{ item.key}}</h6>
-            <button><img src="/Image/minus.png" alt=""></button>
+              <button @click="Accordion(index)"><img :src="index === activeIndex ? '/image/minus.png' : '/image/plus.png'"></button>
             </div>
-            <p class="paragraf">{{ item.value }}</p>
+            <p v-show="index === activeIndex" class="paragraf">{{ item.value }}</p>
         </div>
     </div>
    
@@ -21,7 +21,11 @@ import { mapActions, mapGetters } from 'vuex';
 
 export default{
     name:'SkillsBlock',
-     
+    data:()=>{
+        return{
+            activeIndex: null,
+        }
+    } ,
     computed: {
         ...mapGetters([
             'SkillsStore'
@@ -30,7 +34,14 @@ export default{
     methods: {
         ...mapActions([
             'AxsiosStoreSkills'
-        ])
+        ]),
+         Accordion(index) {
+            if (this.activeIndex === index) {
+                this.activeIndex = null
+            } else {
+                this.activeIndex = index
+            }
+        }
     },
     mounted() {
         this.AxsiosStoreSkills()

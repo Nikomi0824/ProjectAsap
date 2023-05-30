@@ -2,12 +2,12 @@
 <!-- eslint-disable vue/valid-template-root -->
 <template>
  <section>
-    <div class="right contener">
+    <div class="right contener" id="ABOUT">
         <div class="top">
             <h1>I am Slava</h1>
             <p class="paragraf inInfPararagraf">{{ InformationsStore.title }}<br/>{{ InformationsStore.description }}</p>
         </div>
-        <a>SCROLL TO MORE</a>
+        <router-link :to="{ name: 'PageMainBlock', hash: '#SKILLS' }">SCROLL TO MORE</router-link>
     </div>
     <img   clsss="IMG_INFO_BLOCK"  src="/Image/me.jpg" alt="foto">
  </section>

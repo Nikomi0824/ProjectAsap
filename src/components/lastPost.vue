@@ -1,7 +1,7 @@
 <template>
   <div class="contener last-post">
     <h2>Last posts</h2>
-    <div class="top"><a href="#">ALL POSTS</a></div>
+    <div class="top"><router-link :to="{ name: 'PagBlog' }">ALL POSTS</router-link></div>
     <div class="ItemPosts">
       <itemPost v-for="(item, index) in PostStore.content" :key="index" :item="item"></itemPost>
     </div>

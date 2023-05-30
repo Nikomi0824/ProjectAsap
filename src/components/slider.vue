@@ -1,37 +1,68 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- eslint-disable vue/valid-template-root -->
 <template>
- <section class="slider">
+ <section class="slider" id="SOCIAl">
     <div class="contener heading">
         <h2>{{ SladerStore.title }}</h2>
         <p class="paragraf">{{ SladerStore.subtitle }} </p>
     </div>
     <div class="Item">
         <img src="/Image/Left.png" class="left" alt="left">
-        <div class="sliderItem contener"> 
-            <div class="IMG_item" v-for="(slide, index) in SladerStore.content" :key="index">
+        <Swiper class="sliderItem contener" :options="constructions"> 
+            <SwiperSlide class="IMG_item" v-for="(slide, index) in SladerStore.content" :key="index">
                 <img :src="slide.icon" :alt="SladerStore.link"/>
-            </div>
-        </div>
-        <img src="/Image/Left.png" class="right" alt="right">
+            </SwiperSlide>
+        </Swiper>
+        <img  src="/Image/Left.png" class="right" alt="right">
     </div>
  </section>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
 
 export default{
     name:'SliderBlock',
-     computed: {
+    computed: {
         ...mapGetters([
-            'SladerStore'
-        ]),
+            'SladerStore']),
+        constructions() {
+            return {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                slidesPerGroup: 3,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                navigation: {
+                    nextEl: '.right',
+                    prevEl: '.left'
+                },
+                breakpoints: {
+                    600: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1115: {
+                        slidesPerView: 6,
+                        spaceBetween: 20
+                    }
+                }
+            }
+        }
     },
+    
+    
     methods: {
         ...mapActions([
             'AxsiosStoreSlader'
-        ])
+        ]),
+    },
+    components:{
+        Swiper,
+        SwiperSlide,
     },
     mounted() {
         this.AxsiosStoreSlader()

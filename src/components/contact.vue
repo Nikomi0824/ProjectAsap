@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- eslint-disable vue/valid-template-root -->
 <template>
- <section class="Form contener">
-    <h2>Contact us</h2>
+ <section class="Form contener" >
+    <h2 id="CONTACTS">Contact us</h2>
     <p class="small-paragraph">
         Life is 10% what happens to you and 90% how you react to it. It does not matter how slowly you go as long as you do not stop. Confucius.
     </p>
@@ -81,6 +81,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 form{
     display: flex;
@@ -89,6 +90,7 @@ form{
     width: 460px;
     max-width: 100%;
     margin: 0 auto;
+     background-image: ('/img/подложка 1 (1).png');
 }
 .Input{
     display: flex;
